@@ -1,0 +1,106 @@
+/* app css stylesheet */
+html,body {
+	width: 100%;
+}
+
+h1{
+	font-family: 'Abril Fatface', cursive;
+	text-align: center;
+	font-size: 50px;
+	color:#552700;
+	width: 100vw;
+}
+div {
+	transition:;
+}
+
+#content-box{
+	font-family: 'Abril Fatface', cursive;
+	background:#ccc;
+	border:10px solid black;
+	width: 400px;
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	float:left;
+	text-align: center;
+	opacity: .8;
+}
+
+#border-box {
+	font-family: 'Abril Fatface', cursive;
+	width:400px;
+	background:#ccc;
+	padding:20px;
+	border:10px solid black;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	float:left;
+	text-align:center;
+	margin: 5px 10px;
+	opacity: .7;
+}
+
+.button {
+    background: #D49A6A;
+    color: #552700;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 20px;
+    height: 60px;
+    width: 100px;
+    line-height: 60px;
+    margin: 10px 10px;
+    text-align: center;
+    border: none;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background: #AA6C39;
+}
+
+
+body {
+      height: 75vh;
+      width: 75vw;
+      margin: 0;
+      padding: 0;
+  }
+
+html{
+	background-image: url('https://images.unsplash.com/photo-1474314005122-3c07c4df1224?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=4639737d202958d7a954e0311410ace7');
+	background-size: cover;
+	background-position: right top;
+	background-attachment: fixed;
+	width:100vw;
+}  
+#map {
+    width: 50vw;
+    height: 100vh;
+    float:left;
+    margin: auto;
+    margin-left: 50px;
+    opacity: .9;
+}
+.controls {
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  height: 29px;
+  margin-left: 17px;
+  margin-top: 10px;
+  outline: none;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+
+.controls:focus {
+  border-color: #4d90fe;
+}
