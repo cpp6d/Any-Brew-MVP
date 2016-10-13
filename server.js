@@ -5,7 +5,7 @@ const dontenv 		 = require('dotenv');
 const mongoose       = require('mongoose');
 const bodyParser     = require('body-parser');
 const BreweryDb 	 = require('brewerydb-node');
-const brewdb 		 = new BreweryDb(process.env.BreweryKey);
+const brewdb 		 = new BreweryDb('39a2a5c07029c99d88f9878f5d397c80');
 // configuration ===========================================
 const db = require('./server/db.js');
 const favorite = require('./server/favorites/favoriteModel.js')
@@ -53,7 +53,6 @@ app.post('/api/favorites',(req,res)=>{
 			console.log('already in the database')
 		}
 	})
-	
 })
 
 app.post('/', (req,res)=> {

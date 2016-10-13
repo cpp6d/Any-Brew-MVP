@@ -29,14 +29,14 @@ div {
 
 #border-box {
 	font-family: 'Abril Fatface', cursive;
-	width:400px;
+	width:300px;
 	background:#ccc;
 	padding:20px;
 	border:10px solid black;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	float:left;
+	float:right;
 	text-align:center;
 	margin: 5px 10px;
 	opacity: .7;
