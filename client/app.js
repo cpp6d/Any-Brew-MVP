@@ -1,4 +1,20 @@
-var app = angular.module('app', []);
+var app = angular.module('app', ['ngRoute']);
+
+app.config($routeProvider=>{
+	$routeProvider
+	.when('/favorites', {
+		templateUrl: 'views/favorites.html',
+		controllers: 'MyFactory'
+	})
+	.when('/search', {
+		templateUrl: 'views/search.html',
+		controllers: 'MyFactory'
+	})
+	.otherwise({
+		template: '<h1>Welcome to AnyBrew</h1>',
+		controllers: 'MyFactory'
+	})
+});
 
 app.factory('MyFactory', function($http){
 	var addBrewery = function(entry){
@@ -20,7 +36,7 @@ app.factory('MyFactory', function($http){
 	};
 
 	var getFavorites= function(){
-		return $http.get('/favorites')
+		return $http.get('/api/favorites')
 		.then(response=>{
 			return response.data;
 		})

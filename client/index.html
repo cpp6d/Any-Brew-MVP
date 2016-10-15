@@ -7,40 +7,32 @@
     <script src="app.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmMfJTs3mqiDlOenXCiYWNy8v0ZEcBmso&libraries=places&callback=initMap"
         async defer></script>
-    <script src='maps.js'></script>
+    <script src="maps.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
-    <link rel="stylesheet" type='text/css' href="app.css" />
+    <link rel="stylesheet" type="text/css" href="app.css" />
 
     <!-- Title and GoogleMap API-->
-    <h1>Any-Brew</h1>
-    <div id="map"></div>
+   <!--  <h1>Any-Brew</h1>
+    <div id="map"></div> -->
   </head>
 
-  <body ng-app='app'>
-    
-    <!-- Decorcations for the Buttons key-->
-    <div ng-controller='myController'>
-      <div class='wrapper'>
-        <button class='button' type='submit' ng-click='addBrewery(search)'>Submit</button>
-        <button class='button' ng-click='getFavorites()'>Favorites</button>
-      </div>
-      
-
-      <!-- This pulls up list of our favorites-->
-      <div id='border-box' ng-repeat='y in favorites'> {{y.favorites}} </div>
-      
-      <!-- Search for the breweries and location as well -->
-      <form ng-submit='submitForm()'>
-      <input id='pac-input' class='controls' type='text' ng-model='search' placeholder='Search Brewey' />
+  <body ng-app="app">
+    <form ng-submit="submitForm()">
+        <input id="pac-input" class="controls" type="text" ng-model="search" placeholder="Search Brewey" />
       </form>
+    <!-- Decorcations for the Buttons key-->
+    <div ng-controller="myController">
+      <div class="wrapper">
+        <button class="button" ng-href="#/search" type="submit" ng-click="addBrewery(search)"><a ng-href="#search">Submit</a></button>
+        <button class="button" ng-click="getFavorites()"><a ng-href="#favorites">Favorites</a></button>
+      </div>
+      <ng-view></ng-view>
+
+      <!-- Search for the breweries and location as well -->
       
       <!-- Pulls the results and display it on the page -->
-      <div id='content-box' ng-repeat='x in brewery'>
-        <img src='{{x.images.medium}}'/>
-        <div><button type ='submit' ng-click='addFavorites(x.name)'>Add to Favorites</button></div>
-        <a href={{x.website}}>{{x.website}}</a>
-        <div>{{x.description}}</div>
-      </div>
     
     </div>
   </body>

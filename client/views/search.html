@@ -1,0 +1,6 @@
+<div id='content-box' ng-repeat='x in brewery'>
+    <img src='{{x.images.medium}}'/>
+    <div><button type ='submit' ng-click='addFavorites(x.name)'>Add to Favorites</button></div>
+    <a href={{x.website}}>{{x.website}}</a>
+    <div>{{x.description}}</div>
+</div>

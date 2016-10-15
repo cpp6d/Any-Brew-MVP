@@ -1,7 +1,7 @@
 // modules =================================================
 const express        = require('express');
 const app            = express();
-const dontenv 		 = require('dotenv');
+const dotenv 		 = require('dotenv');
 const mongoose       = require('mongoose');
 const bodyParser     = require('body-parser');
 const BreweryDb 	 = require('brewerydb-node');
@@ -28,7 +28,7 @@ app.get('/', function(req,res){
 	res.sendfile(__dirname +'/client/index.html')
 })
 
-app.get('/favorites', function(req,res){
+app.get('/api/favorites', function(req,res){
 	favorite.find({}, (err,result)=>{
 		if(err){
 			console.log(err)
@@ -37,6 +37,17 @@ app.get('/favorites', function(req,res){
 		}
 	})
 })
+
+// app.post('/api/delete', (req,res)=>{
+
+// const search = req.body;
+// console.log(search)
+// 	favorite.findOne({favorites: search.favorites},(err,data)=>{
+// 		data.remove();
+// 	})
+// 	res.send('completed');
+
+// })
 
 app.post('/api/favorites',(req,res)=>{
 	const search = req.body;
